@@ -42,7 +42,7 @@
                     <td>{{$cartItem->name}}</td>
                     <td>{{$cartItem->price}}</td>
 {{--                    <td>{{$cartItem->quantity}}</td>--}}
-                    <input type="hidden" name="id" value="{{$cartItem->id}}">
+                    <input type="hidden" name="id" value="{{$cartItem->id}}" min="1" max="{{$cartItem->inventory}}">
                     <td><input class="w3-input" type="number" name="quantity"
                                value="{{$cartItem->quantity}}" style="width: 100px;"></td>
                     <td>{{$cartItem->quantity*$cartItem->price}}</td>
